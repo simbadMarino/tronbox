@@ -154,12 +154,8 @@ const Contracts = {
           path.relative(options.working_directory, options.build_info_directory)
         );
       }
-      console.log("Writing build-info...");
-      console.log(inputFileName);
       fs.writeFileSync(path.relative(options.working_directory, options.build_info_directory) + path.sep + `${inputFileName}.json`, JSON.stringify(solcStandardInput));
-      console.log(
-        `Standard JSON Input ${inputFileName}.json saved in...`
-      );
+
     })
   }
 

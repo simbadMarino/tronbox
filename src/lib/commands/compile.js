@@ -55,11 +55,9 @@ Usage: $0 compile [--all] [--evm] [--quiet]
     }
 
     const config = Config.detect(options);
-    //console.debug(config);
 
     if (options.contracts && options.contracts.length > 0) {
       config.compileTargets = options.contracts;
-      console.debug(options.contracts);
     }
 
     Contracts.compile(config, done);
